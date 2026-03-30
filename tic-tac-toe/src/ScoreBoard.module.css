@@ -1,0 +1,49 @@
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.card {
+  padding: 12px 20px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-align: center;
+  min-width: 76px;
+  transition: border-color 0.3s, background 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card.activeX {
+  border-color: var(--accent-x);
+  background: var(--accent-x-glow);
+}
+
+.card.activeO {
+  border-color: var(--accent-o);
+  background: var(--accent-o-glow);
+}
+
+.card.activeDraw {
+  border-color: var(--border-hover);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.label {
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.labelX { color: var(--accent-x); }
+.labelO { color: var(--accent-o); }
+
+.value {
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1;
+}

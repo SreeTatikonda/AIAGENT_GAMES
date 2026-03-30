@@ -1,0 +1,55 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 28px;
+}
+
+.cell {
+  width: clamp(88px, 17vw, 108px);
+  height: clamp(88px, 17vw, 108px);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: clamp(26px, 5.5vw, 36px);
+  font-weight: 400;
+  font-family: var(--font);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, border-color 0.18s;
+  cursor: default;
+  outline: none;
+  user-select: none;
+  letter-spacing: 0;
+}
+
+.cell.clickable {
+  cursor: pointer;
+}
+
+.cell.clickable:hover {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: var(--border-hover);
+}
+
+.cell.x {
+  color: var(--accent-x);
+}
+
+.cell.o {
+  color: var(--accent-o);
+}
+
+.cell.win {
+  border-color: var(--win-border);
+  background: var(--win-bg);
+  animation: pulse 0.4s ease;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
