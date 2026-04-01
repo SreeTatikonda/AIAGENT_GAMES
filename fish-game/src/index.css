@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --font: 'DM Mono', 'Fira Code', 'Courier New', monospace;
+
+  /* Base */
+  --bg:           #020818;
+  --surface:      #040e28;
+  --border:       #0a1f3a;
+  --border-hover: #1a3a5a;
+
+  /* Text */
+  --text-primary: #d8e8f0;
+  --text-muted:   #4a7a9a;
+  --text-dim:     #0a1f3a;
+
+  /* Player accent */
+  --accent-player:      #7ad4e8;
+  --accent-player-glow: rgba(122, 212, 232, 0.15);
+  --accent-danger:      #e87a7a;
+
+  /* Power-ups */
+  --accent-speed:  #7ae8c8;
+  --accent-shield: #e8c87a;
+  --accent-shrink: #c87ae8;
+
+  /* Score */
+  --accent-score: #e8e8a0;
+
+  /* Stage colors */
+  --stage-0: hsl(200, 60%, 55%);
+  --stage-1: hsl(160, 60%, 55%);
+  --stage-2: hsl(280, 60%, 65%);
+  --stage-3: hsl(30,  80%, 60%);
+
+  /* HUD */
+  --hud-bg:     rgba(2, 8, 24, 0.80);
+  --hud-border: rgba(10, 31, 58, 0.90);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  font-family: var(--font);
+  color: var(--text-primary);
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+}

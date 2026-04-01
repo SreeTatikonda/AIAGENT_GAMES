@@ -1,0 +1,159 @@
+.hud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Top left */
+.topLeft {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.4rem;
+  pointer-events: none;
+}
+
+.scoreLabel {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.scoreVal {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 500;
+  color: var(--accent-player);
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.progressBar {
+  width: 120px;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  margin-top: 0.35rem;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--accent-player);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.scoreGoal {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  margin-top: 0.2rem;
+}
+
+/* Top right */
+.topRight {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+
+.lives {
+  display: flex;
+  gap: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.lifeIcon {
+  line-height: 1;
+}
+
+.stageBadge {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Bottom right */
+.bottomRight {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  pointer-events: all;
+}
+
+.hiScore {
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pauseBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  line-height: 1;
+  transition: border-color 0.15s, color 0.15s;
+  cursor: pointer;
+}
+
+.pauseBtn:hover {
+  border-color: var(--text-muted);
+  color: var(--text-primary);
+}
+
+/* Bottom center: power-up */
+.powerupBar {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--hud-bg);
+  border: 1px solid var(--hud-border);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.puIcon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.puLabel {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  min-width: 48px;
+}
+
+.puTrack {
+  width: 80px;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.puFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}

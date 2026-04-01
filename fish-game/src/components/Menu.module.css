@@ -1,0 +1,133 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 8, 24, 0.72);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 2.5rem 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  max-width: 380px;
+  width: 90vw;
+  text-align: center;
+}
+
+.fishIcon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.title {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  color: var(--accent-player);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: -0.8rem;
+}
+
+.highScore {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.highScore span {
+  color: var(--accent-shield);
+}
+
+.diffGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.diffOption {
+  display: flex;
+  flex-direction: column;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color 0.15s;
+  text-align: left;
+}
+
+.diffOption input {
+  display: none;
+}
+
+.diffOption:hover {
+  border-color: var(--border-hover);
+}
+
+.diffOption.active {
+  border-color: var(--accent-player);
+  background: var(--accent-player-glow);
+}
+
+.diffLabel {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.diffDesc {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+  letter-spacing: 0.05em;
+}
+
+.diffOption.active .diffLabel {
+  color: var(--accent-player);
+}
+
+.playBtn {
+  width: 100%;
+  padding: 0.75rem;
+  background: transparent;
+  border: 1px solid var(--accent-player);
+  border-radius: 2px;
+  color: var(--accent-player);
+  font-size: 0.9rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: background 0.15s, color 0.15s;
+}
+
+.playBtn:hover {
+  background: var(--accent-player);
+  color: var(--bg);
+}
+
+.controls {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  flex-wrap: wrap;
+  justify-content: center;
+}

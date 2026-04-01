@@ -1,0 +1,122 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 8, 24, 0.75);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.5rem 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  max-width: 320px;
+  width: 88vw;
+  text-align: center;
+}
+
+.icon {
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+.icon.win { color: var(--accent-shield); border-color: var(--accent-shield); }
+.icon.lose { color: var(--accent-danger); border-color: var(--accent-danger); }
+
+.title {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.win  { color: var(--accent-shield); }
+.lose { color: var(--accent-danger); }
+
+.scoreBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.scoreLabel {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.scoreVal {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 500;
+  color: var(--accent-player);
+  letter-spacing: 0.05em;
+}
+
+.newBest {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: var(--accent-shield);
+  text-transform: uppercase;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.prevBest {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.btnGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.4rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.65rem;
+  background: transparent;
+  border: 1px solid var(--accent-player);
+  border-radius: 2px;
+  color: var(--accent-player);
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn:hover {
+  background: var(--accent-player);
+  color: var(--bg);
+}
+
+.secondary {
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+
+.secondary:hover {
+  background: var(--border);
+  color: var(--text-primary);
+}
